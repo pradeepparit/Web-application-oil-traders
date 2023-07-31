@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-image: url('../images/motorcycle.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(146, 146, 146);
+    background-blend-mode: multiply;
+    background-position-y: 50%;
+    background-position-x: 100%;
+}
+
+.topnav {
+    display: flex;
+    margin-right: 10%;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .btn-1{
+    background-color: darkgray;
+    color: black;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+
+  .btn-2{
+    background-color: darkgray;
+    color: black;
+    border-radius: 5px;
+    margin-left: 40px;
+  }
+  .btn-1:hover{
+    padding: 17px 16px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: green;
+  } 
+
+  .btn-2:hover {
+    padding: 17px 16px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: navy;
+  } 
+
+  .tagline{
+    color: #fff;
+    font-size: 50px;
+    margin-top: -20%;
+    font-family: sans-serif;
+    font-weight: bold;
+  }

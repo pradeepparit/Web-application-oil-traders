@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shop</title>
+  <link rel="stylesheet" href="../static/CSS/dls.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+    <li><a href="http://127.0.0.1:5000/profile">Profile</a></li>
+    <li><a class="active" href="http://127.0.0.1:5000/add_product">Add Products</a></li>
+    <li><a href="http://127.0.0.1:5000/dls">Sell Products</a></li>
+    <li><a href="http://127.0.0.1:5000/search">Home</a></li>
+    <li><h3>Shree Patil Oil Traders Jaysingpur</h3></li>
+  </ul>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+  <div class="container">
+    <form name="order_form" method="post" action="http://127.0.0.1:5000/generate_bill">
+
+      <table class="table table-bordered table-hover" id="myTable">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Quantity</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Arrival Date</th>
+            <th scope="col">Product Manufacture Date</th>
+            <th scope="col">Product Exipiry Date</th>
+            <th scope="col">Quantity</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <!-- 
+        id, product_name, product_quantity, product_price, product_arrival_date, product_manufacture_date,
+        product_expiry_date -->
+
+          {% for post in posts %}
+          <tr>
+            <th scope="row">{{post.id}} </th>
+            <td>{{ post.product_name }}</td>
+            <td>{{ post.product_quantity }}</td>
+            <td>{{post.product_price}}</td>
+            <td>{{post.product_arrival_date}}</td>
+            <td>{{post.product_manufacture_date}}</td>
+            <td>{{post.product_expiry_date}}</td>
+            <td><input type="number" name="values[]" value="0" class="input"></td>
+
+          </tr>
+
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+
+      <button type="submit" class="button">Submit Order</button>
+    </form>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script> -->
+
+      <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

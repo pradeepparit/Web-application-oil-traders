@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/style-4.css">
+    <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+        <li><a href="http://127.0.0.1:5000/profile">Profile</a></li>
+        <li><a class="active" href="http://127.0.0.1:5000/add_product">Add Products</a></li>
+        <li><a href="http://127.0.0.1:5000/dls">Sell Products</a></li>
+        <li><a href="http://127.0.0.1:5000/search">Home</a></li>
+
+        <li>
+            <h3>Shree Patil Oil Traders Jaysingpur</h3>
+        </li>
+    </ul>
+
+
+    {% for msg in get_flashed_messages() %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+
+        </button>
+        {{msg}}
+
+    </div>
+    {% endfor %}
+
+
+    <form method="post" class="addnewproduct" action="http://127.0.0.1:5000/add_product">
+        <h1>Add Product</h1>
+        <div>
+            <label>Product Name:</label><input type="text" name="product_name" placeholder="ENTER PRODUCT NAME"
+                id="product_name" required>
+            <label>Product Quantity:</label><input type="text" name="product_quantity"
+                placeholder="ENTER PRODUCT QUANTITY" id="product_quantity" required>
+            <label>Product Price:</label><input type="text" name="product_prize" placeholder="ENTER PRODUCT PRIZE"
+                id="product_prize" required>
+        </div>
+        <div>
+            <label>Product Arrival date:</label><input type="date" name="product_arrival_date" id="product_arrival_date"
+                required>
+            <label>Product Manufacture date:</label><input type="date" name="product_manufacture_date"
+                id="product_manufacture_date" required>
+            <label>Product Expiry date:</label><input type="date" name="product_expiry_date" id="product_expiry_date"
+                required>
+        </div>
+        <input type="submit" value="Add Product" onclick="register()">
+    </form>
+    <script src="JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

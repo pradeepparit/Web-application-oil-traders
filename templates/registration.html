@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="CSS/style-3.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style-3.css') }}">
+  <title>New Registration</title>
+</head>
+<body>
+ 
+  <!-- {% if  product_arrival_date %}
+  <h1> {{ product_arrival_date }}  </h1>
+  {% endif %} -->
+
+
+
+  <form method="POST" action="/registration"  class="box">
+    
+  	<h1>REGISTRATION</h1>
+    {{ form.hidden_tag() }}
+
+    {{ form.username() }}
+
+    {{ form.password() }}
+   
+    {{ form.shop_name() }}
+
+    {{ form.shop_type() }}
+
+    {{ form.shop_owner() }} 
+
+    {{ form.shop_address() }} 
+
+     <label>Enter Shop Start Date : </label>  
+    {{ form.shop_start_date() }} 
+
+    {{ form.csrf_token }}
+
+{{ form.submit()}}
+</form> 
+
+  <script src="JS/index.js"></script>
+</body>
+</html>

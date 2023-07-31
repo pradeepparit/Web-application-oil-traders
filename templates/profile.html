@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            background-image: url("../static/images/profile.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            background-color: grey;
+            background-blend-mode: multiply;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+        button {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 0px 16px;
+            text-decoration: none;
+            border: none;
+            background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h3{
+            color:#fff;
+            margin-left: -90%;
+            margin-top: 3%;
+        }
+
+        .data {
+            width: 500px;
+            max-width: 700px;
+            margin: 7% 0% 0% 30%;
+            padding: 2rem;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            background: #ffffff;
+            opacity: 70%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+        }
+
+        .data-1 {
+            opacity: 100%;
+            margin-top: 2px;
+            font-weight: bold;
+            margin-top: 10%;
+        }
+
+        .edit-button{
+            margin-left: 80%;
+            background-color: navy;
+            border: none;
+            border-radius: 4px 4px;
+            padding: 7px 20px;
+        }
+
+        .edit-button a{
+            opacity: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+        <li><a href="http://127.0.0.1:5000/profile">Profile</a></li>
+        <li><a class="active" href="http://127.0.0.1:5000/add_product">Add Products</a></li>
+        <li><a href="http://127.0.0.1:5000/dls">Sell Products</a></li>
+        <li><a href="http://127.0.0.1:5000/search">Home</a></li>
+        <li><h3>Shree Patil Oil Traders Jaysingpur</h3></li>
+    </ul>
+
+    <div class="data">
+        <div class="data-1">
+            <label>Shop Name :</label>
+            {{ shopn }}
+        </div>
+        <div class="data-1">
+            <label>Shop Type :</label>
+            {{ shopt }}
+        </div>
+        <div class="data-1">
+            <label>Shop Owner Name :</label>
+            {{ shopon }}
+        </div>
+        <div class="data-1">
+            <label>Shop Address :</label>
+            {{ shopa }}
+        </div>
+        <div class="data-1">
+            <label>Shop Start Date :</label>
+            {{ shopsd[0] }}
+        </div>
+
+        <button class="edit-button"><a href="http://127.0.0.1:5000/profile_update">edit</a></button>
+
+</body>
+
+</html>

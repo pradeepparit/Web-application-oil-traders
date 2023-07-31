@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>Your Bill</title>
+  <link rel="stylesheet" href="../static/CSS/bill.css">
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+    <li><a href="http://127.0.0.1:5000/profile">Profile</a></li>
+    <li><a class="active" href="http://127.0.0.1:5000/add_product">Add Products</a></li>
+    <li><a href="http://127.0.0.1:5000/dls">Sell Products</a></li>
+    <li><a href="http://127.0.0.1:5000/search">Home</a></li>
+    <li><h3>Shree Patil Oil Traders Jaysingpur</h3></li>
+  </ul>
+
+  <div class="container">
+    <h1>Your Bill</h1>
+    <h2 align="center">{{ sp_name }} </h2>
+
+    <div class="details">
+    <div> <b>Bill number:</b> {{ num }} </div>
+    <div> <b>Date/Time:</b> </div>
+    <div> {{ today_date }} </div>
+    <div> {{ now_time }} </div>
+    </div>
+
+    <table border="2" width="100%" id="bill_table" name="bill_table">
+      <tr>
+        <th>Product</th>
+        <th>Unit Cost</th>
+        <th>Number Purchased</th>
+        <th>Cost</th>
+      </tr>
+      {% for element in items %}
+      <tr>
+        <td>
+          {{ element[0] }}
+        </td>
+        <td>
+          {{ element[1] }}
+        </td>
+        <td>
+          {{ element[2]}}
+        </td>
+        <td>
+          {{ element[3]}}
+        </td>
+        <td>
+          {{ element[4]}}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <label><b>Total Bill : </b> {{ total }} Rs.</label><br>
+    <div class="text"><p>Thank you, visit again !</p></div>
+  </div>
+  <a href="{{ url_for('pdf') }}"><button class="print">Print Bill</button></a>
+</body>
+
+</html>

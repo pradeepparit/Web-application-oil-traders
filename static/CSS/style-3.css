@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-image: url('../images/registration.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    color: #fff;
+    align-content: center;
+}
+.box{
+    width: 400px;
+    max-width: 400px;
+    margin-left: 45%;
+    padding: 2rem;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: tomato;    
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.box label{
+    color: #fff;
+    font-size: 17px;
+    margin-left: 5%;
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+.form__link:hover {
+    text-decoration: underline;
+}
+
+.box input[type="text"],
+.box input[type="password"],
+.box input[type="date"]{
+    border: 0 solid #eff6f5;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    padding: 14px 10px;
+    border: 2px solid #f5f7f6;
+    width: 250px;
+    background-color: #f5f8f7;
+    color: var(--border-radius);
+    transition: 0.2s;
+    
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus{
+    width: 300px; 
+    border-color:#eaefee ;
+}
+
+.box input[type="submit"]{
+    border: 0 solid #e4ebea;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    padding: 14px 10px;
+    color: var(--border-radius);
+    color: #fff;
+    background-color: #28a9a9;
+    border-radius: 40%;
+    transition: 0.2s;
+    cursor: pointer;
+}
