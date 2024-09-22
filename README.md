@@ -9,3 +9,11 @@ This project is a Flask-based web application designed for managing a store's in
 5. PDF Invoice Generation: Generate downloadable invoices in PDF format.
 6. Inventory Alerts: Automatic alerts for low stock, near-expiry, and expired products.
 7. MySQL Integration: Data is stored in a MySQL database with models handled by SQLAlchemy.
+
+## Technologies Used:
+1. Flask: Web framework for building the server and handling requests.
+2. Flask-WTF: For form validation.
+3. Flask-Login: Manages user authentication.
+4. Flask-SQLAlchemy: ORM for database operations.
+5. MySQL: Database for storing user and product data.
+6. pdfkit: For generating PDFs of invoices.
