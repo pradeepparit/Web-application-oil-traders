@@ -17,3 +17,18 @@ This project is a Flask-based web application designed for managing a store's in
 4. Flask-SQLAlchemy: ORM for database operations.
 5. MySQL: Database for storing user and product data.
 6. pdfkit: For generating PDFs of invoices.
+
+
+## Setup Instructions:
+1. Requirements
+- Python 3.x
+- MySQL Database
+- wkhtmltopdf (for PDF generation)
+
+2. Required Python Packages:
+- Flask
+- Flask-WTF
+- Flask-Login
+- Flask-SQLAlchemy
+- pdfkit
+- WTForms
