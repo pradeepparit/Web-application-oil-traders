@@ -32,3 +32,8 @@ This project is a Flask-based web application designed for managing a store's in
 - Flask-SQLAlchemy
 - pdfkit
 - WTForms
+
+## Install required packages:
+```bash
+pip install Flask Flask-WTF Flask-Login Flask-SQLAlchemy pdfkit WTForms
+```
