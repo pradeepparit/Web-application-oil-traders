@@ -37,3 +37,9 @@ This project is a Flask-based web application designed for managing a store's in
 ```bash
 pip install Flask Flask-WTF Flask-Login Flask-SQLAlchemy pdfkit WTForms
 ```
+
+## MySQL Setup:
+Create a MySQL database and update the ```SQLALCHEMY_DATABASE_URI``` configuration in the app:
+```bash
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:''@localhost:3306/store'
+```
