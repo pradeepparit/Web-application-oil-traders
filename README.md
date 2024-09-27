@@ -45,3 +45,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:''@localhost:3306/store'
 ```
 Replace ```localhost```, ```root```, and ```store``` with your MySQL host, user, and database name.
 
+## wkhtmltopdf Setup:
+To enable PDF generation, install wkhtmltopdf and provide the path to the executable:
+```bash
+config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+```
