@@ -50,3 +50,4 @@ To enable PDF generation, install wkhtmltopdf and provide the path to the execut
 ```bash
 config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
 ```
+Make sure the path is correct according to your system configuration.
