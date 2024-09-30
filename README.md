@@ -51,3 +51,10 @@ To enable PDF generation, install wkhtmltopdf and provide the path to the execut
 config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
 ```
 Make sure the path is correct according to your system configuration.
+
+## Database Initialization:
+Before running the application, initialize the database:
+```bash
+from app import db
+db.create_all()
+```
