@@ -58,3 +58,9 @@ Before running the application, initialize the database:
 from app import db
 db.create_all()
 ```
+## Running the Application:
+Run the Flask development server:
+```bash
+python app.py
+```
+Access the application at http://127.0.0.1:5000.
