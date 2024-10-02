@@ -64,3 +64,16 @@ Run the Flask development server:
 python app.py
 ```
 Access the application at http://127.0.0.1:5000.
+
+# Application Routes:
+```/``` : Home page.
+```/registration``` : User registration page.
+```/login``` : Login page.
+```/logout``` : Logout the current user.
+```/profile``` : View the user's shop profile.
+```/profile_update``` : Update the user's profile.
+```/add_product``` : Add products to the store inventory.
+```/dls``` : Display a list of products with current stock.
+```/generate_bill``` : Create a bill for selected products.
+```/pdf``` : Generate a PDF invoice.
+```/search``` : Search products in the store.
