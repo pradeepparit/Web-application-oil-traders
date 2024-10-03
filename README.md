@@ -66,7 +66,7 @@ python app.py
 Access the application at http://127.0.0.1:5000.
 
 # Application Routes:
-```/``` : Home page.
+- ```/``` : Home page.
 - ```/registration``` : User registration page.
 - ```/login``` : Login page.
 - ```/logout``` : Logout the current user.
