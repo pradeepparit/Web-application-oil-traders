@@ -65,7 +65,7 @@ python app.py
 ```
 Access the application at http://127.0.0.1:5000.
 
-# Application Routes:
+## Application Routes:
 - ```/``` : Home page.
 - ```/registration``` : User registration page.
 - ```/login``` : Login page.
@@ -77,3 +77,12 @@ Access the application at http://127.0.0.1:5000.
 - ```/generate_bill``` : Create a bill for selected products.
 - ```/pdf``` : Generate a PDF invoice.
 - ```/search``` : Search products in the store.
+
+## Database Models:
+1. RegisterModel: Handles user registration details.
+
+- Fields: id, username, password, shop_name, shop_type, shop_owner_name, shop_address, shop_start_date.
+
+2. AddProduct: Handles product details.
+
+- Fields: id, product_name, product_quantity, product_price, product_arrival_date, product_manufacture_date, product_expiry_date.
