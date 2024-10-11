@@ -92,3 +92,7 @@ Access the application at http://127.0.0.1:5000.
 2. LoginForm: Form for user login.
 3. update_profile: Form for updating user profile.
 4. Product Form (implemented in the route ```/add_product ```): Handles product details like name, quantity, price, and expiration.
+
+
+## PDF Generation:
+The application can generate a PDF bill for purchased products using pdfkit. Ensure that wkhtmltopdf is properly installed and the path is correctly set.
