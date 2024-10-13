@@ -91,7 +91,7 @@ Access the application at http://127.0.0.1:5000.
 1. RegistrationForm: Form for user registration.
 2. LoginForm: Form for user login.
 3. update_profile: Form for updating user profile.
-4. Product Form (implemented in the route ```/add_product ```): Handles product details like name, quantity, price, and expiration.
+4. Product Form (implemented in the route ```/add_product```): Handles product details like name, quantity, price, and expiration.
 
 
 ## PDF Generation:
